@@ -16,6 +16,10 @@ connectDB();
 
 app.use('/', examRoutes, mcqRoutes);
 
+app.use('/', (req,res) => {
+  res.json({message: "Welcome To Exam Management App!!"})
+})
+
 app.listen(PORT, () => {
   console.log(`Server is running on Port:${PORT}`);
 });
